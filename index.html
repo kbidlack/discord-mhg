@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discord MHG</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <h2>Discord Message History Grapher</h2>
+    <input
+      type="file"
+      id="folderInput"
+      webkitdirectory
+      onchange="verifyFolder();"
+    />
+
+    <br /><br />
+    <div id="channelSelect" style="display: none">
+      <input type="text" id="channelId" placeholder="Channel ID" />
+      <button id="generateGraph" onclick="generateGraph()">
+        Generate Graph
+      </button>
+    </div>
+
+    <br /><br />
+    <div id="messageHistoryGraph" style="display: none">
+      <canvas id="messageHistoryChart"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
