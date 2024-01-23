@@ -17,7 +17,7 @@ function verifyFolder() {
 }
 
 function verifyChannelId(id) {
-  return /^\d{18}$/.test(id) || id === "";
+  return /^\d+$/.test(id) || id === "";
 }
 
 function readFile(file) {
